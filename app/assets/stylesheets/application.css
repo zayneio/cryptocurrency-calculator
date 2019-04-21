@@ -1,0 +1,157 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body{
+   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+   margin:0;
+ }
+
+ .grid{
+   display: grid;
+   grid-template-columns: 2fr 3fr;
+   grid-template-rows: 1fr;
+   height: 100vh;
+ }
+
+ .left {
+   background:#f6f9fc;
+   padding:10px;
+ }
+
+ .right {
+   background: #001628;
+ }
+
+ .right h1{
+   text-align:center;
+ }
+
+ label{
+   padding-bottom:6px;
+ }
+
+ .field {
+   border-radius:4px;
+   height:40px;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top:8px;
+   width:95%;
+   border:1px solid rgba(0,0,0,0.25);
+   padding:2px 6px;
+ }
+
+ .calculate-btn {
+     cursor: pointer;
+     height: 50px;
+     line-height: 40px;
+     padding: 0 14px;
+     -webkit-box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+     box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+     color: #fff;
+     border-radius: 4px;
+     font-size: 15px;
+     font-weight: 600;
+     text-transform: uppercase;
+     letter-spacing: .025em;
+     background: #6772e5;
+     text-decoration: none;
+     transition: all .15s ease;
+     margin-top:18px;
+ }
+ .calculate-btn:hover {
+   margin-top:15px;
+ }
+
+ .profileImg{
+   width:20px;
+   border-radius:100%;
+   margin-right:20px;
+ }
+
+ .portfolio-wrapper{
+   padding:20px;
+ }
+
+ .row{
+   display: flex;
+   flex-direction: row;
+   background: white;
+   box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+   padding: 20px 10px;
+   border-radius:8px;
+   margin: 10px 10px 10px 10px;
+ }
+
+ .col{
+   flex-grow:1;
+ }
+
+ .col .header{
+   font-size:10px;
+ }
+
+ .col .text {
+   font-size:18px;
+ }
+
+ .portfolio-value{
+   margin-left:auto;
+   margin-right:auto;
+   padding:20px;
+   color:white;
+ }
+
+ .portfolio-value--total{
+   font-size:14px;
+ }
+
+ .portfolio-value--content{
+  font-size:30px;
+ }
+
+ .currency-list {
+   display:flex;
+   flex-direction: column
+ }
+
+ .currency-list-item {
+   box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+   padding: 20px;
+   border-radius:8px;
+   margin: 5px;
+   border:1px solid rgba(0,0,0,0.25);
+   list-style-type:none;
+   font-size:18px;
+   margin: 5px 15px 0 0;
+   transition: ease-in-out 0.3s;
+ }
+
+ .currency-list-item:hover {
+   background:#eee;
+   cursor:pointer;
+   margin: 10px 15px 10px 0;
+ }
+
+ .currency-list-item a{
+   text-decoration:none;
+   color: #333;
+ }
+
+ .currency-list-item .currency_symbol {
+   float:right;
+   font-size:12px;
+ }
