@@ -1,10 +1,18 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# Author: github.com/zayneio
 #
-# Examples:
+# This seed file contains a list of data for 1,316 unique cryptocurrencies
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Fields:
+# @name [String] the name of the currency
+# @max_supply [Bigint] the max_supply for the currency
+# @currency_symbol [String] the currency symbol for the currency
+# @slug [String] a slug for each currency formatted to work with the CoinMarketCap API (api.coinmarketcap.com)
+#
+# Example use:
+# rails g model Currency name max_supply:bigint currency_symbol slug
+# rails db:migrate
+# rails db:seed
+
 currencies = Currency.create([
   { name: 'Bitcoin', max_supply: 21000000, currency_symbol: 'BTC', slug: 'bitcoin' },
   { name: 'Ethereum', max_supply: 96096842, currency_symbol: 'ETH', slug: 'ethereum' },
