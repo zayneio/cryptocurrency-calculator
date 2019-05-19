@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple cryptocurrency portfolio calculator built with react and ruby on rails.
 
-Things you may want to cover:
+![Image of Cryptocurrency Portfolio Calculator](https://github.com/zayneio/cryptocurrency-calculator/blob/master/app/assets/crypto-calculator.png)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
