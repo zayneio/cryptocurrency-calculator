@@ -1,4 +1,4 @@
-# README
+# Cryptocurrency Portfolio Calculator
 
 A simple cryptocurrency portfolio calculator built with react and ruby on rails.
 
