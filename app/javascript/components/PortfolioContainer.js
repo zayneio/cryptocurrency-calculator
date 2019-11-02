@@ -32,15 +32,16 @@ class PortfolioContainer extends Component {
       })
     })
     .catch( (data) => {
-      debugger
+      //console.log(data)
     })
   }
 
   handleSelect(e){
     e.preventDefault()
-    debugger
+
     const id = e.target.getAttribute('data-id')
     const activeCurrency = this.state.search_results.filter( item => item.id == parseInt(id))
+
     this.setState({
       active_currency: activeCurrency[0],
       search_results: []
@@ -58,7 +59,6 @@ class PortfolioContainer extends Component {
       amount: amount
     })
     .then( (data) => {
-      console.log(data)
       this.setState({
         amount: '',
         active_currency: null,
@@ -66,7 +66,7 @@ class PortfolioContainer extends Component {
       })
     })
     .catch( (data) => {
-      debugger
+      //console.log(data)
     })
   }
 
