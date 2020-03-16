@@ -22,9 +22,7 @@ class PortfolioContainer extends Component {
         search_results: [...data.data.currencies]
       })
     })
-    .catch( (data) => {
-      //console.log(data)
-    })
+    .catch( (err) => console.log(err))
   }
 
   handleSelect = (curr, e) => {
@@ -55,9 +53,7 @@ class PortfolioContainer extends Component {
         portfolio: [...this.state.portfolio, data.data]
       })
     })
-    .catch( (data) => {
-      //console.log(data)
-    })
+    .catch( (err) => console.log(err))
   }
 
   handleAmount = (e) => {

@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import SearchResult from './SearchResult'
 
 const Search = (props) => {
-  const searchResults = props.searchResults.map( curr => {
+  const results = props.searchResults.map( curr => {
     return (
       <SearchResult 
         key={curr.id} 
@@ -21,7 +21,7 @@ const Search = (props) => {
           <input onChange={props.handleChange} autoComplete="off" type="text" name="name" placeholder="Ex: Bitcoin, Litecoin, Ethereum..." value={props.name} className="field"/>
         </div>
         <div className="currency-list">
-          {searchResults}
+          {results}
         </div>
       </form>
     </div>
