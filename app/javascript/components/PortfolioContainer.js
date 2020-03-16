@@ -6,24 +6,15 @@ import Portfolio from './Portfolio'
 import axios from 'axios'
 
 class PortfolioContainer extends Component {
-  constructor(props){
-    super(props)
-
-    this.state = {
-      portfolio: [],
-      search_results: [],
-      active_currency: null,
-      amount: ''
-    }
-
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSelect = this.handleSelect.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleAmount = this.handleAmount.bind(this)
+  state = {
+    portfolio: [],
+    search_results: [],
+    active_currency: null,
+    amount: ''
   }
 
-  handleChange(e){
-    axios.post('http://localhost:3000/search', {
+  handleChange = (e) => {
+    axios.post('/search', {
       search: e.target.value
     })
     .then( (data) => {
@@ -36,25 +27,24 @@ class PortfolioContainer extends Component {
     })
   }
 
-  handleSelect(e){
+  handleSelect = (curr, e) => {
     e.preventDefault()
 
-    const id = e.target.getAttribute('data-id')
-    const activeCurrency = this.state.search_results.filter( item => item.id == parseInt(id))
+    const activeCurrency = this.state.search_results.find( item => item.id == curr.id)
 
     this.setState({
-      active_currency: activeCurrency[0],
+      active_currency: activeCurrency,
       search_results: []
     })
   }
 
-  handleSubmit(e){
+  handleSubmit = (e) => {
     e.preventDefault()
 
     let currency = this.state.active_currency
     let amount = this.state.amount
 
-    axios.post('http://localhost:3000/calculate', {
+    axios.post('/calculate', {
       id: currency.id,
       amount: amount
     })
@@ -70,10 +60,8 @@ class PortfolioContainer extends Component {
     })
   }
 
-  handleAmount(e){
-    this.setState({
-      [e.target.name]: e.target.value
-    })
+  handleAmount = (e) => {
+    this.setState({ [e.target.name]: e.target.value })
   }
 
   render(){
