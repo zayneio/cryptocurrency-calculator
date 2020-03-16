@@ -1,10 +1,8 @@
 class Currency < ApplicationRecord
   API_URL = ENV['API_BASE_URL']
 
-  # Calculate the value based off the assets current price 
-  # and the amount owned
+  # Calculate the value based off the assets current price and the amount owned
   # @param amount [String] the amount a user owns
-  # @return value [Float] the total value of amount * price
   def calculate_value(amount)
     (current_price.to_f * amount.to_f).round(4)
   end
